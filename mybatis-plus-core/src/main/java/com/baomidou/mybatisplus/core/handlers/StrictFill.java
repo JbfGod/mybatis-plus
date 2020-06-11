@@ -46,7 +46,7 @@ public class StrictFill {
         return new StrictFill(fieldName, fieldType, () -> fieldVal);
     }
 
-    public static StrictFill of(String fieldName, Class<?> fieldType, Supplier<Object> fieldVal) {
+    public static <T> StrictFill of(String fieldName, Class<?> fieldType, Supplier<T> fieldVal) {
         return new StrictFill(fieldName, fieldType, fieldVal);
     }
 }
